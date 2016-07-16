@@ -1,7 +1,12 @@
 img.imageLogo{
-    width:450px; /* you can use % */
+    width:50%; /* you can use % */
     height: auto;
     display:block;
     text-align:center;
     margin: 0 auto;
+}
+
+div.addSidePadding li{
+    padding-left: 15px;
+    padding-right: 15px;
 }
