@@ -8,10 +8,11 @@
 <link rel="stylesheet" href="./styles/myStyle.css">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
 <script src="./scripts/nav.js"></script>
+<script src="./scripts/gallery.js"></script>
 <body>
 
 <!-- Side Navigation -->
-<nav class="w3-sidenav w3-green w3-animate-left w3-green-dark" style="display:none;z-index:5" id="mySidenav">
+<nav class="w3-sidenav w3-green w3-animate-left w3-green-dark w3-xlarge" style="display:none;z-index:5" id="mySidenav">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-large"><i class="fa fa-times" aria-hidden="true"></i> Zamknij</a>
   <a href="#"><i class="fa fa-info" aria-hidden="true"></i> Informacje </a>
   <a href="#"><i class="fa fa-info" aria-hidden="true"></i> Kontakt </a>
@@ -20,9 +21,9 @@
     
 <!-- Header -->
 <header class="w3-container w3-theme w3-padding" id="myHeader">
-  <span onclick="w3_open()" class="w3-opennav"><i class="fa fa-bars w3-xlarge w3-opennav"></i> MENU</span>
+  <span onclick="w3_open()" class="w3-opennav w3-xlarge"><i class="fa fa-bars w3-xlarge w3-opennav"></i> MENU</span>
   <div class="w3-container w3-center">
-    <img src="res/pid7green.jpg" alt="Logo placeholder" class="imageLogo w3-animate-bottom"> </img>
+    <img src="res/pid7green.jpg" alt="Logo placeholder" class="imageLogo w3-animate-bottom">
   </div>
 </header>
 
@@ -43,6 +44,7 @@
     <div class="w3-dropdown-content w3-card-4 w3-border">
       <a class="" href="javascript:void(0)" >Historia</a>
       <a class="" href="javascript:void(0)">Nasz zespół</a>
+      <a class="" href="javascript:void(0)">Galeria</a>
     </div>
   </div>
     
@@ -60,47 +62,38 @@
 <div class="w3-section"></div>
     
 <div class="w3-row-padding w3-center w3-margin-top w3-margin-bottom mainTiles">
-
     <div class="w3-third">
-      <div class="w3-card-2 w3-padding-top ">
-
+      <div class="w3-section w3-padding-top ">
         <img src="res/rabbit.png" class="w3-border">
-
       </div>
-    </div>
-    
+    </div>    
     <div class="w3-third">
-      <div class="w3-card-2 w3-padding-top ">      
-
+      <div class="w3-section w3-padding-top ">      
         <img src="res/dog.png" class="w3-border">
-
       </div>
     </div>
-
     <div class="w3-third">
-      <div class="w3-card-2 w3-padding-top ">    
-
+      <div class="w3-section w3-padding-top ">    
         <img src="res/cat.png" class="w3-border">
-
       </div>
     </div>
-    
 </div>
 
+<h2 class="w3-center">Nasza galeria</h2>
+<div class="w3-content gallery">
+
+    <img class="w3-animate-opacity mySlides" src="res/dog.png">
+    <img class="w3-animate-opacity mySlides" src="res/cat.png">
+    <img class="w3-animate-opacity mySlides" src="res/dog.png">
+    <img class="w3-animate-opacity mySlides" src="res/cat.png">
+
+    <a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;left:0;" onclick="plusDivs(-1)">❮</a>
+    <a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;right:0;" onclick="plusDivs(+1)">❯</a>
+</div>
+    
 <div class="w3-container">
 <hr>
-<div class="w3-center">
-  <h2>Color Classes</h2>
-</div>
 
-<div class="w3-row">
-  <div class="w3-col w3-container m2 w3-red"><p>Red</p></div>
-  <div class="w3-col w3-container m2 w3-blue"><p>Blue</p></div>
-  <div class="w3-col w3-container m2 w3-blue-grey"><p>Blue Grey</p></div>
-  <div class="w3-col w3-container m2 w3-teal"><p>Teal</p></div>
-  <div class="w3-col w3-container m2 w3-yellow"><p>Yellow</p></div>
-  <div class="w3-col w3-container m2 w3-orange"><p>Orange</p></div>
-</div>
 
 <hr>
 <div class="w3-center">
@@ -392,17 +385,7 @@ class creates progress bars:</p>
 </div>
 <hr>
 
-<h2 class="w3-center">Slideshows</h2>
-<div class="w3-content" style="max-width:800px;position:relative">
 
-<img class="mySlides w3-animate-opacity" src="img_fjords.jpg" style="width:100%">
-<img class="mySlides w3-animate-opacity" src="img_lights.jpg" style="width:100%">
-<img class="mySlides w3-animate-opacity" src="img_mountains.jpg" style="width:100%">
-<img class="mySlides w3-animate-opacity" src="img_forest.jpg" style="width:100%">
-
-<a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;left:0;" onclick="plusDivs(-1)">❮</a>
-<a class="w3-btn-floating w3-hover-dark-grey" style="position:absolute;top:45%;right:0;" onclick="plusDivs(+1)">❯</a>
-</div>
 
 <div class="w3-container">
 <hr>
@@ -573,23 +556,7 @@ function myAccFunc(id) {
     }
 }
 
-// Slideshows
-var slideIndex = 1;
 
-function plusDivs(n) {
-slideIndex = slideIndex + n;
-showDivs(slideIndex);
-}
-
-function showDivs(n) {
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  x[slideIndex-1].style.display = "block";
-}
 
 showDivs(1);
 

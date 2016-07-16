@@ -15,7 +15,7 @@ div.mainNavBar div{
 }
 
 .mainTiles div{
-    min-height:460px;
+    min-height:auto;
     
 }
 
@@ -27,4 +27,15 @@ div.mainNavBar div{
 
 .navBarElement div{
    width: 100%; 
+   text-align: left;
+}
+
+div.gallery{
+    max-width: 50%;
+    position:relative;
+}
+
+div.gallery img {
+    width:75%;
+    margin: 0 auto;
 }
