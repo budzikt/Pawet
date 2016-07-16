@@ -1,0 +1,7 @@
+img.imageLogo{
+    width:450px; /* you can use % */
+    height: auto;
+    display:block;
+    text-align:center;
+    margin: 0 auto;
+}
