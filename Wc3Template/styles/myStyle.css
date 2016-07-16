@@ -1,12 +1,25 @@
+/*Image logo style*/
 img.imageLogo{
-    width:50%; /* you can use % */
+    width:50%;
     height: auto;
     display:block;
     text-align:center;
     margin: 0 auto;
 }
 
-div.addSidePadding li{
-    padding-left: 15px;
-    padding-right: 15px;
+/*Navbar padding*/
+div.mainNavBar div{
+    padding-left: 25px;
+    padding-right: 25px;
+    text-decoration: none!important; /* for webkit */
+}
+
+.mainTiles div{
+    min-height:460px;
+    
+}
+
+
+.navBarElement div{
+   width: 100%; 
 }
