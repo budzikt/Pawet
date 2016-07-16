@@ -19,6 +19,11 @@ div.mainNavBar div{
     
 }
 
+.mainTiles img{
+    width: 40%;
+    height: auto;
+}
+
 
 .navBarElement div{
    width: 100%; 
