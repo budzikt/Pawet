@@ -49,3 +49,9 @@ height: 400px;
     position:fixed; 
     padding: 0px 15px;
 }
+
+.map-frame {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
